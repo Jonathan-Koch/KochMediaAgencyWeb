@@ -53,7 +53,7 @@ export default function AboutUSMain() {
                   <strong>How do we do it?</strong>
                 </p>
 
-                <ul class="list-disc list-inside mt-4 space-y-2">
+                <ul className="list-disc list-inside mt-4 space-y-2">
                   <li>We treat your budget like it’s our own. (You’d cry if you saw my first-year profit margins. Spoiler: They were negative.)</li>
                   <li>We obsess over irrational human quirks. Like why a CFO will agonize over a $5K software demo but impulse-buy a $500 cycling jersey. (It’s science. Kind of.)</li>
                   <li>We measure success in boardroom outcomes—leads closed, hours saved, and yes, cushions survived.</li>

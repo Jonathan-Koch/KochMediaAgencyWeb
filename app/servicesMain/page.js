@@ -1,8 +1,7 @@
 "use client";
 
 import { motion } from 'framer-motion';
-import { FaTwitter, FaFacebook, FaLinkedin } from 'react-icons/fa'; // Social media icons
-import Image from "next/image";
+import { FaTwitter, FaFacebook, FaLinkedin, FaCode, FaLaptopCode, FaChartLine } from 'react-icons/fa'; 
 import Navigation from '../navigation';
 import Testimonials from '../Testimonials';
 import Footer from '../Footer';
@@ -10,18 +9,21 @@ import Footer from '../Footer';
 const services = [
   {
     name: "Software Development",
-    description: "Custom software solutions tailored to your business needs. From enterprise applications to mobile apps, we build scalable and secure software that drives efficiency and innovation.",
-    image: "/software-dev.jpg",
+    description:
+      "Custom software solutions tailored to your business needs. From enterprise applications to mobile apps, we build scalable and secure software that drives efficiency and innovation.",
+    icon: <FaCode className="w-16 h-16 text-white mx-auto mb-4" />,
   },
   {
     name: "Website Development",
-    description: "Stunning, responsive, and user-friendly websites that captivate your audience. We specialize in creating websites that are not only visually appealing but also optimized for performance and SEO.",
-    image: "/website-dev.jpg",
+    description:
+      "Stunning, responsive, and user-friendly websites that captivate your audience...",
+    icon: <FaLaptopCode className="w-16 h-16 text-white mx-auto mb-4" />,
   },
   {
     name: "Digital Marketing",
-    description: "Data-driven digital marketing strategies to boost your online presence. We offer SEO, PPC, social media marketing, and content creation to help you reach your target audience and grow your business.",
-    image: "/digital-marketing.jpg",
+    description:
+      "Data-driven digital marketing strategies to boost your online presence...",
+    icon: <FaChartLine className="w-16 h-16 text-white mx-auto mb-4" />,
   },
 ];
 
@@ -46,7 +48,7 @@ export default function OurServices() {
             transition={{ duration: 0.8, delay: 0.2 }}
             className="text-lg md:text-xl text-gray-300 max-w-2xl mx-auto"
           >
-            We offer a wide range of services designed to help your business thrive in the digital world. From cutting-edge software development to powerful digital marketing strategies, we’ve got you covered.
+            We offer a wide range of services designed to help your business thrive...
           </motion.p>
         </div>
 
@@ -61,33 +63,34 @@ export default function OurServices() {
                 transition={{ delay: index * 0.2 }}
                 className="relative p-6 border border-gray-700 rounded-lg bg-black bg-opacity-50 hover:shadow-2xl hover:shadow-gray-500/50 transition-all duration-300"
               >
-                {/* Service Image */}
-                <div className="w-full h-48 relative mb-6">
-                  <Image
-                    src={service.image}
-                    alt={service.name}
-                    fill
-                    className="rounded-lg object-cover"
-                  />
+                {/* Service Icon */}
+                <div className="text-center mb-6">
+                  {service.icon}
                 </div>
 
                 {/* Service Name */}
-                <h3 className="text-2xl font-bold text-white text-center mb-4">{service.name}</h3>
+                <h3 className="text-2xl font-bold text-white text-center mb-4">
+                  {service.name}
+                </h3>
 
                 {/* Service Description */}
-                <p className="text-gray-400 text-center">{service.description}</p>
+                <p className="text-gray-400 text-center">
+                  {service.description}
+                </p>
               </motion.div>
             ))}
           </div>
         </div>
+
         <hr className="border-t border-gray-600 opacity-50 w-3/6 mx-auto mt-16" />
+
         {/* Testimonials Section */}
         <div className="py-20 bg-black">
           <div className="container mx-auto">
-            <h2 className="text-4xl font-bold mb-12 text-center text-white">What Our Clients Say</h2>
-            <div className="">
-              <Testimonials />
-            </div>
+            <h2 className="text-4xl font-bold mb-12 text-center text-white">
+              What Our Clients Say
+            </h2>
+            <Testimonials />
           </div>
           <hr className="border-t border-gray-600 opacity-50 w-3/4 mx-auto mt-16" />
         </div>
@@ -108,7 +111,7 @@ export default function OurServices() {
             transition={{ duration: 0.8, delay: 0.2 }}
             className="text-lg md:text-xl text-gray-300 mb-8 max-w-2xl mx-auto"
           >
-            Let’s work together to create something extraordinary. Contact us today to get started!
+            Let’s work together to create something extraordinary...
           </motion.p>
           <motion.button
             initial={{ opacity: 0, scale: 0.9 }}
