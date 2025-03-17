@@ -43,7 +43,7 @@ function FooterCTA() {
               className="text-center mb-4"
             >
               <FiCheckCircle className="text-4xl text-black mx-auto mb-4" />
-              <h3 className="text-2xl font-semibold text-gray-800">Strategize</h3>
+              <h3 className="text-2xl font-semibold text-gray-800">Strategise</h3>
               <p className="text-gray-600 mt-2">
                 We begin by understanding your business, setting goals, and creating a tailored strategy.
               </p>
@@ -71,7 +71,7 @@ function FooterCTA() {
               className="text-center mb-4"
             >
               <FiLayers className="text-4xl text-black mx-auto mb-4" />
-              <h3 className="text-2xl font-semibold text-gray-800">Optimize</h3>
+              <h3 className="text-2xl font-semibold text-gray-800">Optimise</h3>
               <p className="text-gray-600 mt-2">
                 We continuously monitor and optimize to ensure maximum efficiency and growth.
               </p>

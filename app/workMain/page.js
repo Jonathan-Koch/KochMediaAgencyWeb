@@ -21,54 +21,47 @@ const portfolioItems = [
   {
     title: "Believe Resourcing Group",
     description:
-      "A fully customizable e-commerce platform built with React, Node.js, and Stripe integration.",
+      "A leading industry organisation in the RPO and BPO sector.",
     image: "/believeGroup.png",
-    link: "https://believe-resourcing-group.example.com",
+    link: "https://www.believeresourcinggroup.com",
   },
   {
     title: "Hezekiah Creations",
     description:
-      "A real-time analytics dashboard for social media platforms, built with Next.js and Firebase.",
+      "A cushion manufacturing company.",
     image: "/hezekiahTest.jpg",
-    link: "https://www.facebook.com/HezekiahCreations/",
+    link: "https://www.hezekiahcreations.com",
   },
   {
     title: "Ingenuity Africa",
     description:
-      "An AI chatbot integrated with natural language processing for customer support.",
+      "A website and software devlopment company.",
     image: "/IA.png",
     link: "https://www.ingenuityafrica.co.za/",
   },
   {
     title: "Ingenuity Africa",
     description:
-      "An AI chatbot integrated with natural language processing for customer support.",
-    iframeUrl: "https://www.ingenuityafrica.co.za/", // This item is now an iframe
+      "A website and software devlopment company.",
+    iframeUrl: "https://www.ingenuityafrica.co.za/", // This item is now an iframe=
   },
   {
     title: "Moved",
     description:
-      "An AI chatbot integrated with natural language processing for customer support.",
+      "A leading fitness and dietitian specialist organisation.",
     image: "/moved.png",
-    link: "https://www.movedwellness.com/",
-  },
-  {
-    title: "Believe Hub",
-    description:
-      "An AI chatbot integrated with natural language processing for customer support.",
-    image: "/hub.png",
-    link: "https://thebelievehub.com/",
+    link: "https://www.facebook.com/movedfit",
   },
   {
     title: "PhotoTrav",
     description:
-      "An AI chatbot integrated with natural language processing for customer support.",
+      "A photography and travel agency based in Cape Town.",
     image: "/photoTrav.jpg",
     link: "https://www.facebook.com/PhotoTravSA/",
   },
   {
     title: "Believe Hub",
-    description: "A sleek and modern portfolio website built with Next.js and Tailwind CSS.",
+    description: "The Believe Hub drives career success through innovative workshops, expert guidance, and insights.",
     video: "/believeVideo.mp4",
     link: "https://thebelievehub.com/",
   },

@@ -1,31 +1,40 @@
-'use client';
+"use client";
 import { motion } from 'framer-motion';
 import { FaChartLine, FaCode, FaLaptopCode } from 'react-icons/fa';
 
 const services = [
   { 
     title: 'Digital Marketing', 
-    description: 'SEO, PPC, Social Media, Content Strategy',
-    icon: <FaChartLine className="w-8 h-8 text-white" /> // Digital Marketing icon
+    subcategories: [
+      'SEO',
+      'E-E-A-T Optimised SEO',
+      'PPC',
+      'Social Media',
+      'Content Strategy',
+      'Content Schedule'
+    ],
+    icon: <FaChartLine className="w-8 h-8 text-white" />,
   },
   { 
     title: 'Software Development', 
-    description: 'Develop Robust Technology to Meet Your Business Logic',
-    icon: <FaCode className="w-8 h-8 text-white" /> // Software Development icon
+    icon: <FaCode className="w-8 h-8 text-white" />,
+    description: 'Develop Robust Technology to Meet Your Business Logic.'
   },
   { 
     title: 'Website Development', 
-    description: 'Showcase Who You Are With a Custom Designed Website Using the Latest Technology',
-    icon: <FaLaptopCode className="w-8 h-8 text-white" /> // Website Development icon
-  },
+    icon: <FaLaptopCode className="w-8 h-8 text-white" />,
+    description: 'Showcase Who You Are With a Custom Designed Website Using the Latest Technology.'
+  }
 ];
 
 function ServicesOverview() {
   return (
     <div className="py-20 px-6 bg-black">
-      <div className="container mx-auto">
-        <h2 className="text-4xl font-bold mb-16 text-center text-white">Our Services</h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <div className="container mx-auto text-center">
+        <h2 className="text-4xl font-bold mb-16 text-white inline-block border-b-4 border-gray-600 pb-2">
+          Our Services
+        </h2>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 justify-items-center">
           {services.map((service, index) => (
             <motion.div
               key={service.title}
@@ -33,14 +42,22 @@ function ServicesOverview() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: index * 0.1 }}
-              className="p-8 rounded-2xl "
+              className="p-8 rounded-2xl bg-gray-900 hover:bg-gray-800 transition-all duration-300 w-full max-w-sm text-center"
             >
-              {/* Directly render the icon here */}
-              <div className="mb-4">
+              <div className="mb-4 flex justify-center">
                 {service.icon}
               </div>
               <h3 className="text-2xl font-bold mb-4 text-white">{service.title}</h3>
-              <p className="text-gray-400">{service.description}</p>
+              
+              {service.subcategories ? (
+                <ul className="list-disc list-inside space-y-2 text-center mx-auto max-w-xs">
+                  {service.subcategories.map((item, idx) => (
+                    <li key={idx} className="text-gray-400">{item}</li>
+                  ))}
+                </ul>
+              ) : (
+                <p className="text-gray-400">{service.description}</p>
+              )}
             </motion.div>
           ))}
         </div>

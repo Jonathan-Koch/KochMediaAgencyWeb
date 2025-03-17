@@ -15,9 +15,9 @@ function Hero() {
 
         {/* Middle Text (dark, big, not bold) */}
         <p className="mt-6 text-6xl text-white font-normal">
-          <span className="block">Launch</span>
-          <span className="block">Breakthrough</span>
-          <span className="block">Experiences.</span>
+          <span className="block">Digital Transformation</span>
+          <span className="block">That Impacts EBIT</span>
+          <span className="block"> Within 180 Days.</span>
         </p>
 
         {/* Next Paragraph (bigger than the first but same color) */}
@@ -26,14 +26,14 @@ function Hero() {
           onFocus={() => setIsFocused(true)}
           onBlur={() => setIsFocused(false)}
         >
-          Koch Media Agency is a marketing agency<br />focused on helping brands towards creating success,<br />through best industry practices and top-of-the-range skills.
+          83% of Our Clients Achieve 200%+ ROI.<br />Koch Media Agency is focused on helping<br />brands towards creating success.
         </motion.p>
 
         <motion.div
           whileHover={{ scale: 1.02 }}
           className="mt-6"
         >
-          <button className="bg-gradient-to-r bg-[#2563EB] px-8 py-4 rounded-full text-lg font-semibold flex items-center text-white">
+          <button className="bg-gradient-to-r bg-[#3c3c3c] px-8 py-4 rounded-full text-lg font-semibold flex items-center text-white">
             Start Your Journey
             <FiChevronRight className="ml-2" />
           </button>
@@ -47,7 +47,7 @@ function Hero() {
           <video
             className="w-full h-full object-cover"
             autoPlay
-            src='/KMAVideo.mp4'
+            src='/KMMAAA.mp4'
             muted
             loop
             playsInline

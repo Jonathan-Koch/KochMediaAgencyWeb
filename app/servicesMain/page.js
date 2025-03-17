@@ -1,29 +1,26 @@
 "use client";
 
 import { motion } from 'framer-motion';
-import { FaTwitter, FaFacebook, FaLinkedin, FaCode, FaLaptopCode, FaChartLine } from 'react-icons/fa'; 
+import { FiCode, FiMonitor, FiTrendingUp } from 'react-icons/fi';
 import Navigation from '../navigation';
 import Testimonials from '../Testimonials';
 import Footer from '../Footer';
 
 const services = [
   {
-    name: "Software Development",
-    description:
-      "Custom software solutions tailored to your business needs. From enterprise applications to mobile apps, we build scalable and secure software that drives efficiency and innovation.",
-    icon: <FaCode className="w-16 h-16 text-white mx-auto mb-4" />,
+    name: "Enterprise Software Solutions",
+    outcomes: ["38% avg. efficiency gain", "Scalable architecture", "24/7 support"],
+    icon: <FiCode className="w-12 h-12" />,
   },
   {
-    name: "Website Development",
-    description:
-      "Stunning, responsive, and user-friendly websites that captivate your audience...",
-    icon: <FaLaptopCode className="w-16 h-16 text-white mx-auto mb-4" />,
+    name: "Digital Presence Engineering",
+    outcomes: ["300%+ lead increase", "98% uptime guarantee", "ADA compliant"],
+    icon: <FiMonitor className="w-12 h-12" />,
   },
   {
-    name: "Digital Marketing",
-    description:
-      "Data-driven digital marketing strategies to boost your online presence...",
-    icon: <FaChartLine className="w-16 h-16 text-white mx-auto mb-4" />,
+    name: "Revenue Operations",
+    outcomes: ["27% CAC reduction", "AI-driven analytics", "Boardroom reporting"],
+    icon: <FiTrendingUp className="w-12 h-12" />,
   },
 ];
 
@@ -31,98 +28,89 @@ export default function OurServices() {
   return (
     <>
       <Navigation />
-      <section id="services" className="min-h-screen py-12 bg-black">
-        {/* Services Hero Section */}
-        <div className="container mx-auto text-center py-20">
+      <section className="min-h-screen bg-black">
+        {/* Hero Section */}
+        <div className="container mx-auto px-4 py-24 text-center">
           <motion.h1
-            initial={{ opacity: 0, y: -20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-5xl md:text-6xl font-extrabold text-white mb-6"
-          >
-            Our Services
-          </motion.h1>
-          <motion.p
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
-            className="text-lg md:text-xl text-gray-300 max-w-2xl mx-auto"
+            className="text-5xl md:text-6xl font-bold text-white mb-6"
           >
-            We offer a wide range of services designed to help your business thrive...
+            Industrial-Grade Digital Solutions
+          </motion.h1>
+          <motion.p
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 0.3 }}
+            className="text-xl text-gray-400 max-w-2xl mx-auto"
+          >
+            Quantifiable outcomes for executive leadership
           </motion.p>
         </div>
 
-        {/* Services Grid Section */}
-        <div className="container mx-auto px-4">
+        {/* Services Grid */}
+        <div className="container mx-auto px-4 py-12">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {services.map((service, index) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, y: 20 }}
+                initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                transition={{ delay: index * 0.2 }}
-                className="relative p-6 border border-gray-700 rounded-lg bg-black bg-opacity-50 hover:shadow-2xl hover:shadow-gray-500/50 transition-all duration-300"
+                transition={{ delay: index * 0.15 }}
+                viewport={{ once: true, margin: "-100px" }}
+                className="group relative p-8 rounded-xl bg-gradient-to-br from-gray-900 to-black border border-white/10 hover:border-white/20 shadow-lg hover:shadow-xl hover:shadow-gray-500/20 transition-all duration-300"
               >
-                {/* Service Icon */}
-                <div className="text-center mb-6">
-                  {service.icon}
+                {/* Glossy Overlay */}
+                <div className="absolute inset-0 rounded-xl bg-gradient-to-br from-white/5 to-transparent opacity-20 pointer-events-none" />
+                
+                <div className="relative z-10">
+                  <div className="mb-6 text-white bg-gray-800 p-4 rounded-lg w-max mx-auto group-hover:bg-white group-hover:text-black transition-all">
+                    {service.icon}
+                  </div>
+                  <h3 className="text-2xl font-bold text-white text-center mb-4">
+                    {service.name}
+                  </h3>
+                  <ul className="space-y-3">
+                    {service.outcomes.map((outcome, i) => (
+                      <li key={i} className="flex items-center text-gray-300">
+                        <svg className="w-4 h-4 text-white mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                          <path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/>
+                        </svg>
+                        <span className="text-gray-100">{outcome}</span>
+                      </li>
+                    ))}
+                  </ul>
                 </div>
-
-                {/* Service Name */}
-                <h3 className="text-2xl font-bold text-white text-center mb-4">
-                  {service.name}
-                </h3>
-
-                {/* Service Description */}
-                <p className="text-gray-400 text-center">
-                  {service.description}
-                </p>
               </motion.div>
             ))}
           </div>
         </div>
 
-        <hr className="border-t border-gray-600 opacity-50 w-3/6 mx-auto mt-16" />
-
-        {/* Testimonials Section */}
-        <div className="py-20 bg-black">
-          <div className="container mx-auto">
-            <h2 className="text-4xl font-bold mb-12 text-center text-white">
-              What Our Clients Say
+        {/* Executive CTA */}
+        <div className="container mx-auto px-4 py-24 text-center">
+          <motion.div
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            className="bg-black p-8 rounded-3xl border border-white/10 shadow-2xl relative"
+          >
+            <div className="absolute inset-0 rounded-3xl bg-gradient-to-br from-white/5 to-transparent opacity-10 pointer-events-none" />
+            <h2 className="text-4xl font-bold text-white mb-6 relative z-10">
+              Operational Transformation
             </h2>
-            <Testimonials />
-          </div>
-          <hr className="border-t border-gray-600 opacity-50 w-3/4 mx-auto mt-16" />
+            <p className="text-xl text-gray-400 mb-8 max-w-2xl mx-auto relative z-10">
+              Schedule a confidential strategy session with our executive team
+            </p>
+            <motion.button
+              whileHover={{ scale: 1.03 }}
+              whileTap={{ scale: 0.97 }}
+              className="bg-white text-black px-8 py-4 rounded-xl text-lg font-semibold hover:bg-gray-100 transition-all relative z-10"
+            >
+              Initiate Executive Briefing
+            </motion.button>
+          </motion.div>
         </div>
 
-        {/* Call to Action Section */}
-        <div className="py-20 bg-black text-center">
-          <motion.h2
-            initial={{ opacity: 0, y: -20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-4xl md:text-5xl font-extrabold text-white mb-6"
-          >
-            Ready to Transform Your Business?
-          </motion.h2>
-          <motion.p
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
-            className="text-lg md:text-xl text-gray-300 mb-8 max-w-2xl mx-auto"
-          >
-            Let’s work together to create something extraordinary...
-          </motion.p>
-          <motion.button
-            initial={{ opacity: 0, scale: 0.9 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.5, delay: 0.4 }}
-            className="bg-[#2563EB] text-white px-8 py-3 rounded-lg font-semibold transition-colors"
-          >
-            Get in Touch
-          </motion.button>
-        </div>
-
+        <Testimonials />
         <Footer />
       </section>
     </>

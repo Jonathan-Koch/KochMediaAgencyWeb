@@ -20,12 +20,12 @@ function Footer() {
           <div>
             <h2 className="text-xl font-semibold text-white">Quick Links</h2>
             <ul className="mt-4 space-y-2">
-              <li><Link href="/homeMain" className="hover:text-[#2563EB] transition ">Home</Link></li>
-              <li><Link href="/aboutUsMan" className="hover:text-[#2563EB] transition">About Us</Link></li>
-              <li><Link href="/servicesMain" className="hover:text-[#2563EB] transition">Services</Link></li>
-              <li><Link href="/contactMain" className="hover:text-[#2563EB] transition">Contact Us</Link></li>
-              <li><Link href="/workMain" className="hover:text-[#2563EB] transition">Work</Link></li>
-              <li><Link href="/blogMain" className="hover:text-[#2563EB] transition">Blog</Link></li>
+              <li><Link href="/homeMain" className="hover:text-[#595959] transition ">Home</Link></li>
+              <li><Link href="/aboutUsMan" className="hover:text-[#595959] transition">About Us</Link></li>
+              <li><Link href="/servicesMain" className="hover:text-[#595959] transition">Services</Link></li>
+              <li><Link href="/contactMain" className="hover:text-[#595959] transition">Contact Us</Link></li>
+              <li><Link href="/workMain" className="hover:text-[#595959] transition">Work</Link></li>
+              <li><Link href="/blogMain" className="hover:text-[#595959] transition">Blog</Link></li>
             </ul>
           </div>
 
@@ -52,7 +52,7 @@ function Footer() {
                 placeholder="Enter your email"
                 className="p-2 rounded-l-lg w-full md:w-auto bg-gray-800 border border-gray-600 text-white outline-none"
               />
-              <button className="mt-2 md:mt-0 md:ml-2 bg-blue-600 px-6 py-2 rounded-lg text-white font-semibold hover:bg-blue-700 transition">
+              <button className="mt-2 md:mt-0 md:ml-2 bg-gray-800 px-6 py-2 rounded-lg text-white font-semibold hover:bg-gray-700 transition">
                 Subscribe
               </button>
             </div>

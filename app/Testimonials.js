@@ -17,13 +17,13 @@ function Testimonials() {
       image: "/hezekiahTest.jpg",
     },
     {
-      quote: "The innovative strategies from Koch Media Agency boosted our growth and exceeded our expectations.",
+      quote: "Chayton went above and beyond for our brand and we truely appericiated it.",
       client: "Rudy Project",
       image: "/rudyTest.jpg",
     },
     {
-      quote: "The innovative strategies from Koch Media Agency boosted our growth and exceeded our expectations.",
-      client: "Ferg",
+      quote: "Chayton spear headed all of our marketing for over 2 years, which included all our subsiduries under The Believe Resourcing Group.",
+      client: "The Believe Resourcing Group",
       image: "/believeTest.jpg",
     },
   ];
@@ -57,12 +57,13 @@ function Testimonials() {
         {/* Contact Us Button */}
         <div className="flex justify-center mt-12">
           <Link href="/contactMain">
-            <button className="bg-gradient-to-r bg-[#2563EB] px-8 py-4 rounded-full text-lg font-semibold text-white transition-all duration-300">
+            <button className="bg-gradient-to-r bg-[#353535] px-8 py-4 rounded-full text-lg font-semibold text-white transition-all duration-300">
               Contact Us
             </button>
           </Link>
         </div>
       </div>
+      
     </section>
   );
 }
